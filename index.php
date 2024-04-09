@@ -1,9 +1,22 @@
+<?php
+// Verificar la sesión del administrador
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    // Si no hay una sesión de administrador activa, redirigir a la página de inicio de sesión
+    header("Location: login.php");
+    exit();
+}
+
+// Aquí deberías incluir la lógica para manejar las operaciones de administración, como la actualización de servicios y fotografías.
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MY PICTURE - Fotografía en La Paz</title>
+  <title>Panel de Administración - MY PICTURE</title>
   <!-- Estilos CSS de Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Estilos CSS personalizados -->
@@ -12,26 +25,20 @@
 <body>
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">MY PICTURE</a>
+    <a class="navbar-brand" href="#">MY PICTURE - Panel de Administración</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Ver Sitio</a>
+        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Panel de Administración <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="eventos.php">Eventos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="galeria.php">Galería de Fotos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pedidos.php">Pedidos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contacto.php">Contacto</a>
+          <a class="nav-link" href="logout.php">Cerrar Sesión</a>
         </li>
       </ul>
     </div>
@@ -39,13 +46,8 @@
 
   <!-- Contenido principal -->
   <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Bienvenido a MY PICTURE</h1>
-      <p class="lead">Ofrecemos servicios de fotografía en La Paz. Explora nuestra galería de fotos y realiza tus pedidos online.</p>
-      <hr class="my-4">
-      <p>¡Capturamos tus momentos especiales!</p>
-      <a class="btn btn-primary btn-lg" href="galeria.php" role="button">Ver Galería de Fotos</a>
-    </div>
+    <h1>Bienvenido al Panel de Administración</h1>
+    <!-- Aquí puedes agregar formularios u otras herramientas para administrar el contenido del portal -->
   </div>
 
   <!-- Scripts JavaScript de Bootstrap -->
