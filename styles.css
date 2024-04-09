@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  /* Estilos para la barra de navegación */
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los encabezados */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+  
+  /* Estilos para los formularios */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los botones */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Estilos para las tarjetas */
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para las imágenes de las tarjetas */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
